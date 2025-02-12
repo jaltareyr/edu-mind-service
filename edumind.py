@@ -1,25 +1,28 @@
 import os
 import argparse
 import asyncio
+from dotenv import load_dotenv
 from search.global_search import GlobalSearchService
 from search.query_interpretation import QueryInterpreter
 from processing.format_questions import format_questions
 from processing.csv_to_qti import convert_csv_to_qti
 
+load_dotenv()
+
 # Read API Key from environment variables
-API_KEY = os.getenv("API_KEY")
+API_KEY = os.getenv("GRAPHRAG_API_KEY")
 
 async def generate_questions(query: str, question_type: str, count: int):
     if not API_KEY:
         print("Error: API_KEY is not set!")
         return
 
-    print(f"Using API Key: {API_KEY[:5]}...")  # Only print part of the key for security
-
-    interpreter = QueryInterpreter(api_key=API_KEY)
+    interpreter = QueryInterpreter()
+    print("Fetching informtaion...")
     query_data = await interpreter.interpret_query(query)
 
-    search_service = GlobalSearchService(api_key=API_KEY)
+    print("Generating content...")
+    search_service = GlobalSearchService()
     result = await search_service.search(query_data, question_type, count)
 
     csv_filename = format_questions(result)

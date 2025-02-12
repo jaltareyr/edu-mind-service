@@ -1,0 +1,6 @@
+Type,Unused,Points,Question,CorrectAnswer,Option A,Option B,Option C,Option D,Option E
+MC,,1,What is frontend development primarily concerned with?,3,Server-side scripting,Database management,User interface and user experience,Network security,
+MC,,1,Which of the following technologies is NOT typically used in frontend development?,4,HTML,CSS,JavaScript,SQL,
+MC,,1,What does CSS stand for in the context of web development?,1,Cascading Style Sheets,Computer Style Sheets,Creative Style Sheets,Cascading Script Sheets,
+MC,,1,Which framework is commonly used in frontend development to enhance functionality?,2,Django,React,Flask,Ruby on Rails,
+MC,,1,What is the purpose of JavaScript in frontend development?,3,To structure content,To style web pages,To add interactivity and dynamic behavior,To manage databases,

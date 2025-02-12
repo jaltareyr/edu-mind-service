@@ -129,3 +129,4 @@ def convert_csv_to_qti(csv_filename):
     # Create a ZIP file
     with zipfile.ZipFile(f"output/zip/{zip_filename}.zip", 'w', zipfile.ZIP_DEFLATED) as zipf:
         zipf.write(f"output/qti/{xml_filename}.qti", os.path.basename(f"{xml_filename}.qti"))
+        return xml_filename
