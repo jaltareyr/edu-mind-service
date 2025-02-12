@@ -24,7 +24,6 @@ EduMind CLI Tool is a command-line interface application for generating quiz que
 2. **(Optional) Create and Activate a Virtual Environment:**
 
     ```bash
-    Copy
     python3 -m venv venv
     source venv/bin/activate  # For Windows use: venv\Scripts\activate
     ```
@@ -34,7 +33,6 @@ EduMind CLI Tool is a command-line interface application for generating quiz que
     Make sure you have a requirements.txt file in the project directory. Then run:
 
     ```bash
-    Copy
     pip install -r requirements.txt
     ```
 
