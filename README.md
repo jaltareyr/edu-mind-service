@@ -58,7 +58,6 @@ The CLI tool provides a generate command for creating quiz questions. You can ru
 ### Command Syntax
 
 ```bash
-Copy
 python main.py generate --query "your search query" --question_type "question type" --count number_of_questions
 ```
 
