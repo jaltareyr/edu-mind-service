@@ -1,0 +1,4 @@
+Type,Unused,Points,Question,CorrectAnswer,Option A,Option B,Option C,Option D,Option E
+MC,,1,What is Git?,2,A programming language,A distributed version control system,A type of database,An operating system,
+MC,,1,What is the primary function of version control in software engineering?,1,To manage changes to source code,To compile code,To run tests,To deploy applications,
+MC,,1,Which feature of Git allows developers to work on features independently?,2,Merging,Branching,Committing,Cloning,

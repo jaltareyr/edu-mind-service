@@ -1,0 +1,4 @@
+Type,Unused,Points,Question,CorrectAnswer,Option A,Option B,Option C,Option D,Option E
+MC,,1,What is frontend development?,2,The part of web development that involves server-side programming,The part of web development that involves creating the user interface and user experience,The part of web development that focuses on database management,The part of web development that deals with network security,
+MC,,1,Which of the following is a key technology used in frontend development?,2,Python,HTML,Java,SQL,
+MC,,1,What is the purpose of CSS in frontend development?,2,To structure content,To style and layout web pages,To add interactivity,To manage databases,

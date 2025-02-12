@@ -1,0 +1,4 @@
+Type,Unused,Points,Question,CorrectAnswer,Option A,Option B,Option C,Option D,Option E
+MC,,1,What is frontend development?,2,The part of web development that creates the server-side logic,The part of web development that creates the user interface and user experience,The part of web development that focuses on database management,The part of web development that handles network security,
+MC,,1,Which of the following technologies is essential for frontend development?,1,HTML,Python,Java,SQL,
+MC,,1,What is a key concept in frontend development?,1,Responsive design,Data encryption,Server-side scripting,Database normalization,

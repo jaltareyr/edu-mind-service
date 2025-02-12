@@ -1,0 +1,55 @@
+- Goal -
+Understand the given text query and provide contextually correct interpretation for following questions:
+
+- Steps -
+1. Identify answers for given questions.
+- 1.1 What is the question asked in the query? If the question is not directly asked, think and answer: Which terms, fields or topics should be known to follow to instructions from the query. Formulate a question asking what these terms, fields or topics are?.
+- 1.2 What command or order is given in the query? If no command is given explicitly, you should keep this answer blank.
+- 1.3 If the query asks for information that is directly and explicitly provided in the context (i.e., the answer can be retrieved without further processing), then output 1. However, if the query requires the model to fetch information from different parts of the context, analyze, compare, or synthesize the data to arrive at the answer, then output 2.
+
+2. Provide concise and accurate answers for each question in English. Use given *TEMPLATE* to provide output.
+
+*TEMPLATE*
+<question>Answer of question 1.1<command>Answer of question 1.2<expectation>Answer of question 1.3<end>
+
+######################
+-Examples-
+######################
+Example_1:
+Query: Create 20 multiple choice question on Dockers and their application in Software Engineering.
+######################
+Logic:
+The given query asks for information retrival and answer generation on that information. There is no analysis to be done on that data so the <expectation> tag should be 1. Moreover, no command is given in the query so <command> tag should be empty.
+Output:
+<question>What are Dockers, Software Engineering, how are they related?<command>Create 20 multiple choice question<expectation>1<end>
+######################
+Example_2:
+Query: Which topic is covered in great depth?
+######################
+Logic:
+The given query asks for information retrival and some reasoning to arive at conclusion. There is analysis to be done on that data so the <expectation> tag should be 2. Moreover, no command is given in the query so <command> tag should be empty.
+Output:
+<question>Which topic is covered in great depth?<command><expectation>2<end>
+######################
+Example_3:
+Query: How to write professional User Stories? Based on the information available from context, help me create 10 multiple choice questions.
+######################
+Logic:
+The given query asks for information retrival and answer generation on that information. There is no analysis to be done on that data so the <expectation> tag should be 2. Moreover, it also gives command to create 10 multiple choice questions, so <command> tag must include the command given in the query.
+Output:
+<question>How to write professional User Stories?<command>Based on the information available from context, help me create 10 multiple choice questions.<expectation>1<end>
+######################
+Example_4:
+Query: What topics require more explainations in the material? For those topics, help me create 10 multiple choice questions to help students gain more understanding of these topics.
+######################
+Logic:
+The given query asks for information retrival and some reasoning to arive at conclusion. There is analysis to be done on that data so the <expectation> tag should be 2. Moreover, it also gives command to create 10 multiple choice questions, so <command> tag must include the command given in the query.
+Output:
+<question>What topics require more explainations in the material?<command>For those topics, help me create 10 multiple choice questions to help students gain more understanding of these topics.<expectation>2<end>
+
+######################
+-Real Data-
+######################
+Query: {query}
+######################
+Output:

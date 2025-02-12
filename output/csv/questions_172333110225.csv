@@ -1,0 +1,4 @@
+Type,Unused,Points,Question,CorrectAnswer,Option A,Option B,Option C,Option D,Option E
+MC,,1,What is frontend development?,2,The part of web development that involves server-side programming,The part of web development that involves creating the user interface and user experience,The part of web development that focuses on database management,The part of web development that deals with network security,
+MC,,1,Which of the following is a key technology used in frontend development?,1,HTML,Python,Java,C#,
+MC,,1,What is the purpose of responsive design in frontend development?,1,To ensure web applications function well on various devices,To improve server response times,To enhance database performance,To secure user data,
