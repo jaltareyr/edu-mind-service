@@ -1,62 +1,107 @@
-EduMind CLI
+# EduMind CLI Tool
 
-EduMind is a Python-based CLI tool for generating quiz questions on various topics. It interacts with a search service to fetch relevant questions and converts them into a standard format.
+EduMind CLI Tool is a command-line interface application for generating quiz questions. It interprets a user-provided query, fetches relevant information, generates questions, formats them, and converts the output into QTI (Question and Test Interoperability) format.
 
-Prerequisites
+## Features
 
-Ensure you have the following installed on your system:
+- **Query Interpretation:** Understand and process the search query provided by the user.
+- **Content Generation:** Utilize a global search service to fetch information and generate quiz questions.
+- **Formatting & Conversion:** Format generated questions and convert them into QTI files for easy integration with learning management systems.
 
-Python 3.8+
+## Prerequisites
 
-Pip
+- **Python 3.7 or higher**
+- **pip** (Python package installer)
 
-Installation
+## Installation
 
-Clone the repository:
+1. **Clone the Repository:**
 
-git clone https://github.com/your-username/edumind.git
-cd edumind
+   ```bash
+   git clone https://github.com/yourusername/edumind-cli-tool.git
+   cd edumind-cli-tool
+   ```
+2. **(Optional) Create and Activate a Virtual Environment:**
 
-Create a virtual environment (recommended):
+    ```bash
+    Copy
+    python3 -m venv venv
+    source venv/bin/activate  # For Windows use: venv\Scripts\activate
+    ```
 
-python -m venv venv
-source venv/bin/activate  # On Windows use: venv\Scripts\activate
+3. **Install the Required Packages:**
 
-Install dependencies:
+    Make sure you have a requirements.txt file in the project directory. Then run:
 
-pip install -r requirements.txt
+    ```bash
+    Copy
+    pip install -r requirements.txt
+    ```
 
-Running EduMind
+## Configuration
+1. **Create a .env File:**
+    
+    In the root directory of the project, create a file named .env.
 
-To run EduMind without parameters, simply execute:
+2. **Add Your API Key:**
 
-python edumind.py
+    Add your API key to the .env file with the following format:
 
-This will display the CLI options available for generating quiz questions.
+    ```env
+    GRAPHRAG_API_KEY=your_api_key_here
+    ```
+    Replace your_api_key_here with your actual API key.
 
-Usage
+## Usage
+The CLI tool provides a generate command for creating quiz questions. You can run the function from the command line using the following syntax.
 
-To generate quiz questions with parameters, use:
+### Command Syntax
 
-python edumind.py generate --query "Frontend development" --question_type "multiple choice" --count 5
+```bash
+Copy
+python main.py generate --query "your search query" --question_type "question type" --count number_of_questions
+```
 
-Environment Variables
+### Arguments
+- `--query`: The search query for generating questions. (Example: "History of World War II")
+- `--question_type`: The type of questions to generate. Examples include "multiple choice" or "multiple response correct".
+- `--count`: The number of quiz questions to generate.
 
-If you are using an API key, create a .env file in the root directory and add:
+### Example
+To generate 10 multiple choice questions about Docker application in Software Engineering, run:
 
-API_KEY=your_secret_api_key_here
+```bash
+python main.py generate --query "Why Dockers are used in Software Engineering" --question_type "multiple choice" --count 10
+```
+
+Upon successful execution, the script will:
+
+1. Interpret the query.
+2. Fetch information using the global search service.
+3. Generate and format the quiz questions.
+4. Convert the formatted questions into a QTI file.
+5. Print the location of the generated QTI file.
+
+## Project Structure
+
+```bash
+edumind-cli-tool/
+│
+├── main.py                      # Entry point for the CLI tool
+├── requirements.txt             # Required Python packages
+├── .env                         # Environment file containing the API key (to be created by the user)
+│
+├── search/
+│   ├── global_search.py         # Module for fetching content from the global search service
+│   └── query_interpretation.py  # Module for interpreting the search query
+│
+└── processing/
+    ├── format_questions.py      # Module for formatting the generated questions
+    └── csv_to_qti.py            # Module for converting CSV data to QTI format
+```
 
 Contributing
+Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
 
-Fork the repository.
-
-Create a new branch (feature-branch).
-
-Commit your changes.
-
-Push to the branch and submit a pull request.
-
-License
-
-This project is licensed under the MIT License.
-
+Contact
+For questions or support, please open an issue in the repository or contact the maintainer at jaltareyr@gmail.com.
